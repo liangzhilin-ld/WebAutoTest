@@ -1,6 +1,7 @@
 package com.hteis.webtest.selenium;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
@@ -245,4 +246,16 @@ public class Driver {
     public static BrowserMobProxy getProxy() {
         return webProxy;
     }
+    //开启手机模式
+	private ChromeOptions setOptions(String deviceName) {
+		ChromeOptions options = new ChromeOptions();
+		Map<String, Object> mobileEmulation = new HashMap<String, Object>();
+		mobileEmulation.put("deviceName", deviceName);
+		options.setExperimentalOption("mobileEmulation", mobileEmulation);
+		options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+		options.addArguments("--auto-open-devtools-for-tabs");
+		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+	    return options;
+	}
 }
