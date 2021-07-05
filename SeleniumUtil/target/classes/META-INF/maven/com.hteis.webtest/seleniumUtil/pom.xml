@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.hteis.webtest</groupId>
+  <artifactId>seleniumUtil</artifactId>
+  <version>1.0.0</version>
+  <name>seleniumUtil</name>
+  <dependencies>
+  	<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.seleniumhq.selenium</groupId>
+    	<artifactId>selenium-firefox-driver</artifactId>
+    	<version>3.141.59</version>
+	</dependency>
+	<!-- 浏览器代理 -->
+	<dependency>
+		<groupId>net.lightbody.bmp</groupId>
+		<artifactId>browsermob-core</artifactId>
+		<version>2.1.5</version>
+	</dependency>
+	    <!-- 解决使用代理报错的问题 -->
+	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>22.0</version>
+	</dependency>
+  </dependencies>
+   <build>
+ 	 <defaultGoal>compile</defaultGoal>
+  </build>
+</project>
